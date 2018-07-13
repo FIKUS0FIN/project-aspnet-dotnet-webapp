@@ -7,7 +7,7 @@ pipeline {
 
   }
   stages {
-    stage('msbuild-info') {
+    stage('Build app') {
       parallel {
         stage('msbuild-info') {
           steps {
