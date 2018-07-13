@@ -11,6 +11,7 @@ pipeline {
       parallel {
         stage('msbuild-info') {
           steps {
+            bat 'nuget restore'
             bat "\"${tool 'MSBuild-deff'}\" SampleWebApplication.sln"
           }
         }
